@@ -1,28 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmfks6y11xtxi"]
+[gd_scene load_steps=3 format=3 uid="uid://dmfks6y11xtxi"]
 
 [ext_resource type="Script" path="res://Script/Counter.gd" id="1_cjkk0"]
+[ext_resource type="StyleBox" uid="uid://cb4splcljayxe" path="res://Style/Separator.tres" id="2_vas03"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+size_flags_vertical = 8
 script = ExtResource("1_cjkk0")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 131.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -210.0
+offset_right = 400.0
+grow_vertical = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_bottom = 40
 
-[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+[node name="Panel" type="Panel" parent="MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("2_vas03")
 
-[node name="text" type="Label" parent="MarginContainer/HSplitContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
-text = "Bullet count:"
+theme_override_constants/margin_top = 15
 
-[node name="counter" type="Label" parent="MarginContainer/HSplitContainer"]
+[node name="Counter" type="Label" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0.610609, 1.34766e-06, 1)
+theme_override_font_sizes/font_size = 40
 text = "0"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_styles/separator = ExtResource("2_vas03")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 15
+
+[node name="Text" type="Label" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.610609, 1.34766e-06, 1)
+theme_override_font_sizes/font_size = 40
+text = "bullet count"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

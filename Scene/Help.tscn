@@ -33,6 +33,7 @@ W   — move forward
 S — move backward
 A — move left
 D — move right
+SPACE — jump
 LMB — shoot"
 vertical_alignment = 1
 uppercase = true

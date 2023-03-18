@@ -3,7 +3,7 @@ class_name Screen
 
 var counter: int = 0
 
-@onready var output: Label = $MarginContainer/HSplitContainer/counter
+@onready var output: Label = $MarginContainer/MarginContainer/Counter
 
 func increment_count():
 	counter += 1
