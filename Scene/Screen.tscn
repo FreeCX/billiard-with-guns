@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmfks6y11xtxi"]
+
+[ext_resource type="Script" path="res://Script/Counter.gd" id="1_cjkk0"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cjkk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+text = "Bullet count:"
+
+[node name="counter" type="Label" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+text = "0"
