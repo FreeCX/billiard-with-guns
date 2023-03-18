@@ -19,6 +19,7 @@ var mouseDelta: Vector2 = Vector2()
 @onready var marker2 = $marker2
 @onready var bullets = get_node("../Bullets")
 @onready var screen: Screen = $Screen
+@onready var help = $Help
 const BULLET_SCENE = preload("res://Scene/Bullet.tscn")
 
 
@@ -28,8 +29,12 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey:
-		if event.is_action("close"):
+		if event.is_action_pressed("close"):
 			get_tree().quit()
+		if event.is_action_pressed("reset"):
+			get_tree().reload_current_scene()
+		if event.is_action_pressed("help"):
+			help.visible = !help.visible
 		
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("shoot"):
@@ -88,6 +93,8 @@ func shoot():
 	
 	var bullet = BULLET_SCENE.instantiate()
 	bullet.position = marker1.global_position
+	bullet.rotation = marker1.global_rotation
+	bullet.rotation_degrees.y -= 80
 	bullet.set_direction(marker2.global_position - marker1.global_position)
 	bullets.add_child(bullet)
 	

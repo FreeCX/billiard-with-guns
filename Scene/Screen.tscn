@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" path="res://Script/Counter.gd" id="1_cjkk0"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_cjkk0")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
+layout_mode = 0
+offset_right = 131.0
 offset_bottom = 40.0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0

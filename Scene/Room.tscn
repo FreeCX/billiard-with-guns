@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bnusi4p40otil"]
+[gd_scene load_steps=30 format=3 uid="uid://bnusi4p40otil"]
 
 [ext_resource type="PackedScene" uid="uid://c4q77be8j8uq4" path="res://Model/table.glb" id="1_4kjbv"]
 [ext_resource type="PackedScene" uid="uid://7ame54nt5drs" path="res://Model/ball.glb" id="2_633ov"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bo8k6rcxfc0st" path="res://Image/rug.jpg" id="7_r83kk"]
 [ext_resource type="Texture2D" uid="uid://5v8yy5t3bdba" path="res://Image/wall.jpg" id="8_n6cvm"]
 [ext_resource type="PackedScene" uid="uid://dmfks6y11xtxi" path="res://Scene/Screen.tscn" id="9_43n7p"]
+[ext_resource type="PackedScene" uid="uid://iokqmyepvwae" path="res://Scene/Help.tscn" id="10_ed1ks"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nkgor"]
 
@@ -372,6 +373,9 @@ transform = Transform3D(0.173648, -0.209794, -0.962202, 0, 0.977046, -0.21303, 0
 transform = Transform3D(0.173648, -0.209794, -0.962202, 0, 0.977046, -0.21303, 0.984808, 0.0369923, 0.169662, 0.445821, -0.424946, -1.22155)
 
 [node name="Screen" parent="Player" instance=ExtResource("9_43n7p")]
+
+[node name="Help" parent="Player" instance=ExtResource("10_ed1ks")]
+visible = false
 
 [node name="Bullets" type="Node3D" parent="."]
 

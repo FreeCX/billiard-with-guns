@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 class_name Screen
 
 var counter: int = 0
