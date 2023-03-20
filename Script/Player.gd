@@ -58,7 +58,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		input.x = 1
 	if Input.is_action_pressed("jump"):
-		velocity.y = jumpForce
+		if velocity.y == 0:
+			velocity.y = jumpForce
 		
 	input = input.normalized()
 	var forward = global_transform.basis.z
