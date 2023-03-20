@@ -15,12 +15,12 @@ var mouseDelta: Vector2 = Vector2()
 @onready var camera: Camera3D = $camera
 @onready var sprite: AnimatedSprite3D = $mf_sprite
 @onready var sound: AudioStreamPlayer3D = $mf_sound
-@onready var marker1 = $marker1
-@onready var marker2 = $marker2
+@onready var marker1 = $pistol/marker1
+@onready var marker2 = $pistol/marker2
 @onready var bullets = get_node("../Bullets")
-@onready var screen: Screen = $Screen
-@onready var help = $Help
-const BULLET_SCENE = preload("res://Scene/Bullet.tscn")
+@onready var screen: Screen = $HUD/Screen
+@onready var help = $HUD/Help
+const BULLET_SCENE = preload("res://Scene/Object/Bullet.tscn")
 
 
 func _ready():
