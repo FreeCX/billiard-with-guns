@@ -13,8 +13,8 @@ var mouseDelta: Vector2 = Vector2()
 
 # objects
 @onready var camera: Camera3D = $camera
-@onready var sprite: AnimatedSprite3D = $mf_sprite
-@onready var sound: AudioStreamPlayer3D = $mf_sound
+@onready var sprite: AnimatedSprite3D = $pistol/mf_sprite
+@onready var sound: AudioStreamPlayer3D = $pistol/mf_sound
 @onready var marker1 = $pistol/marker1
 @onready var marker2 = $pistol/marker2
 @onready var bullets = get_node("../Bullets")
